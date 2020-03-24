@@ -15,7 +15,12 @@ class Packet:
         # Transfer mode for this packet
         assert mode == 0 or mode == 1, "Incorrect transering mode"
         self.mode = mode
+        self.time_traveled = 0
 
+    
+    def add_travel_time(self, travel_time):
+        assert travel_time > 0, "Invalid travel time"
+        self.time_traveled += travel_time
 
 if __name__ == "__main__":
     pk1 = Packet(0,0,0,50, Mode.CLIENT_TO_SERVER)
