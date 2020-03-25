@@ -3,7 +3,6 @@ from abc import ABC, abstractmethod
 
 
 class BaseClient:
-
     '''
     Initialize a client
     Argument:

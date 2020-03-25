@@ -1,6 +1,4 @@
-from enum import IntEnum, unique
+import numpy as np
 
-@unique
-class Mode(IntEnum):
-    CLIENT_TO_SERVER = 0
-    SERVER_TO_CLIENT = 1
+def distance_2d(loc1, loc2):
+    return np.linalg.norm(loc1, loc2)
