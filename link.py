@@ -4,8 +4,8 @@ import numpy as np
 class Link:
 
     def __init__(self, client, server):
-        self.client = client
-        self.server = server 
+        self.client_id = client
+        self.server_id = server 
         self.distance = distance_2d(client.location, server.location)
 
     def generate_delay(self):
