@@ -11,8 +11,7 @@ A **class** that is representing a data packet. Including the following informat
 - Packet size
 - Packet checksum
 - Packet serial number
-- Packet loss (Yes or No)
-- Current latency of the Packet
+
 
 ## `client.py`
 A **class** that is mainly responsible for intimating behaviors of client side process. Including:
