@@ -12,6 +12,12 @@ class Link:
         queue_delay = np.max([np.random.normal(self.distance / np.log(self.distance), np.sqrt(self.distance)), 0])
         return self.distance + queue_delay
 
+    # drop packet based on the distance between client and server
+    # the further they are, the higher probability it is
+    def drop_packet(self, packet):
+        if np.random.random() < (sigmoid(self.distance) / 10):
+            packet.correct = False
+
 
 if __name__ == "__main__":
     pass
