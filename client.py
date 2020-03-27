@@ -68,6 +68,7 @@ class BaseClient:
     get queuing delay from server
     calculate queuing dalay will be done by server side,
     save the new queuing delay '''
+
     def Profiling(self,serverDic,folder_name, profile_type):
         if os.path.exists(folder_name):
             shutil.rmtree(folder_name)
@@ -103,7 +104,7 @@ class BaseClient:
 
 
     ''' Step 4: greedy algorithm '''
-    def greedy(folderProfiles,total_data,N):
+    def greedy(self,folderProfiles,total_data,N):
 
         # direct to the folder
         profile_dic={}
